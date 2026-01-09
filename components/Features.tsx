@@ -239,7 +239,15 @@ const Features: React.FC = () => {
 									<i className="fa-solid fa-check text-primaryStart text-xs"></i>
 								</div>
 								<span className="text-textSecondary">
-									Мгновенное уведомление в Telegram при создании события
+									Не нужно запоминать пароли - автоматическая авторизация через Telegram.
+								</span>
+							</li>							
+							<li className="flex items-start gap-4">
+								<div className="mt-1 w-6 h-6 rounded-full bg-primaryStart/10 flex items-center justify-center flex-shrink-0">
+									<i className="fa-solid fa-check text-primaryStart text-xs"></i>
+								</div>
+								<span className="text-textSecondary">
+									Мгновенное уведомление в группу класса при создании события.
 								</span>
 							</li>
 							<li className="flex items-start gap-4">
@@ -248,7 +256,7 @@ const Features: React.FC = () => {
 								</div>
 								<span className="text-textSecondary">
 									Напоминания о необходимости принять решения приходят в личные
-									сообщения
+									сообщения.
 								</span>
 							</li>
 							<li className="flex items-start gap-4">
@@ -256,7 +264,7 @@ const Features: React.FC = () => {
 									<i className="fa-solid fa-check text-primaryStart text-xs"></i>
 								</div>
 								<span className="text-textSecondary">
-									Больше никаких "потерянных листочков" на дне рюкзака
+									Больше никаких "потерянных листочков" на дне рюкзака!
 								</span>
 							</li>
 						</ul>

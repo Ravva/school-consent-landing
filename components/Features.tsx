@@ -203,7 +203,7 @@ const Features: React.FC = () => {
 							для классных руководителей
 						</div>
 						<h2 className="text-4xl md:text-5xl font-bold mb-6">
-							Создание события за{" "}
+							Создание события за{" "}<br />
 							<span className="text-gradient">2 минуты</span>
 						</h2>
 						<ul className="space-y-6">

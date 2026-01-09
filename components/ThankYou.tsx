@@ -29,7 +29,7 @@ const ThankYou: React.FC = () => {
 					className="text-lg md:text-xl lg:text-2xl text-textSecondary max-w-2xl mx-auto mb-16 leading-relaxed animate-fade-in-up"
 					style={{ animationDelay: "0.2s" }}
 				>
-					Создано с применением новейших технологий разработки веб-приложений с использованием Искуственного интеллекта. 
+					Создано с применением новейших технологий разработки веб-приложений с использованием Искуственного Интеллекта. 
 				</p>
 
 				{/* Action Row: Buttons & Developed By Card */}

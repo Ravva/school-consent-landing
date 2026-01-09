@@ -15,11 +15,6 @@ const Navbar: React.FC = () => {
 	useEffect(() => {
 		const handleScroll = () => {
 			setScrolled(window.scrollY > 20);
-			// Параллакс эффект
-			document.documentElement.style.setProperty(
-				"--scroll-y",
-				`${window.scrollY}`,
-			);
 		};
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
@@ -54,7 +49,7 @@ const Navbar: React.FC = () => {
 					aria-label="Перейти к началу страницы"
 					type="button"
 				>
-					<div className="w-8 h-8 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/20">
+					<div className="w-8 h-8 rounded-lg flex items-center justify-center">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 100 100"
@@ -88,7 +83,7 @@ const Navbar: React.FC = () => {
 							key={link.label}
 							href={link.href}
 							onClick={(e) => handleLinkClick(e, link.href)}
-							className="hover:text-primaryStart transition-colors duration-200 cursor-pointer"
+							className="hover:text-primaryStart transition-colors duration-200"
 						>
 							{link.label}
 						</a>
@@ -99,9 +94,9 @@ const Navbar: React.FC = () => {
 					href="https://t.me/DSConsentBot"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 border border-border hover:border-primaryStart hover:bg-white/10 transition-all group"
+					className="flex items-center gap-3 px-5 py-2.5 rounded-full bg-white/5 border border-border hover:border-primaryStart hover:bg-white/10 transition-colors"
 				>
-					<i className="fa-brands fa-telegram text-xl text-primaryStart group-hover:scale-110 transition-transform"></i>
+					<i className="fa-brands fa-telegram text-xl text-primaryStart"></i>
 					<span className="font-bold text-white tracking-wide">
 						@DSConsentBot
 					</span>

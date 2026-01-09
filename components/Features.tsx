@@ -233,12 +233,33 @@ const Features: React.FC = () => {
 							Все в телефоне. <br />
 							<span className="text-gradient">Без бумаг.</span>
 						</h2>
-						<p className="text-lg text-textSecondary mb-8">
-							Родители получают мгновенное уведомление в Telegram при создании
-							события. Напоминаня о необходимости принять решения приходят в
-							личные сообщения. Больше никаких "потерянных листочков" на дне
-							рюкзака.
-						</p>
+						<ul className="space-y-4 mb-8">
+							<li className="flex items-start gap-4">
+								<div className="mt-1 w-6 h-6 rounded-full bg-primaryStart/10 flex items-center justify-center flex-shrink-0">
+									<i className="fa-solid fa-check text-primaryStart text-xs"></i>
+								</div>
+								<span className="text-textSecondary">
+									Мгновенное уведомление в Telegram при создании события
+								</span>
+							</li>
+							<li className="flex items-start gap-4">
+								<div className="mt-1 w-6 h-6 rounded-full bg-primaryStart/10 flex items-center justify-center flex-shrink-0">
+									<i className="fa-solid fa-check text-primaryStart text-xs"></i>
+								</div>
+								<span className="text-textSecondary">
+									Напоминания о необходимости принять решения приходят в личные
+									сообщения
+								</span>
+							</li>
+							<li className="flex items-start gap-4">
+								<div className="mt-1 w-6 h-6 rounded-full bg-primaryStart/10 flex items-center justify-center flex-shrink-0">
+									<i className="fa-solid fa-check text-primaryStart text-xs"></i>
+								</div>
+								<span className="text-textSecondary">
+									Больше никаких "потерянных листочков" на дне рюкзака
+								</span>
+							</li>
+						</ul>
 						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 							<div className="p-6 rounded-2xl bg-card border border-border hover:bg-white/5 transition-colors">
 								<i className="fa-solid fa-bell text-2xl mb-4 text-white"></i>

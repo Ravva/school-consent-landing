@@ -1,4 +1,5 @@
 import type React from "react";
+import StarBorder from "../src/StarBorder";
 
 const Features: React.FC = () => {
 	return (
@@ -268,21 +269,21 @@ const Features: React.FC = () => {
 								</span>
 							</li>
 						</ul>
-						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-							<div className="p-6 rounded-2xl bg-card border border-border hover:bg-white/5 transition-colors">
-								<i className="fa-solid fa-bell text-2xl mb-4 text-white"></i>
-								<h4 className="font-bold text-white mb-2">Push-уведомления</h4>
-								<p className="text-sm text-textSecondary">
-									Мгновенная доставка информации.
-								</p>
-							</div>
-							<div className="p-6 rounded-2xl bg-card border border-border hover:bg-white/5 transition-colors">
-								<i className="fa-solid fa-signature text-2xl mb-4 text-white"></i>
-								<h4 className="font-bold text-white mb-2">Юридическая сила</h4>
-								<p className="text-sm text-textSecondary">
-									Выдача согласия идентична подписи.
-								</p>
-							</div>
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6 ">
+							<StarBorder thickness={2} color="#d946ef" speed="4s" className="w-full">
+								<div className="bg-card border border-border rounded-2xl p-6 hover:bg-white/5 transition-colors">
+									<i className="fa-solid fa-bell text-2xl mb-4 text-white"></i>
+									<h4 className="font-bold text-white mb-2">Push-уведомления</h4>
+									<p className="text-sm text-textSecondary">Мгновенная доставка информации.</p>
+								</div>
+							</StarBorder>
+							<StarBorder thickness={2} color="#d946ef" speed="4s" className="w-full">
+								<div className="bg-card border border-border rounded-2xl p-6 hover:bg-white/5 transition-colors">
+									<i className="fa-solid fa-signature text-2xl mb-4 text-white"></i>
+									<h4 className="font-bold text-white mb-2">Юридическая сила</h4>
+									<p className="text-sm text-textSecondary">Выдача согласия идентична подписи.</p>
+								</div>
+							</StarBorder>
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 flex justify-center relative">
@@ -305,7 +306,7 @@ const Features: React.FC = () => {
 							</div>
 
 							{/* Content Container */}
-							<div className="bg-[#0F0F11] h-full overflow-y-auto pb-20 relative scrollbar-hide">
+							<div className="bg-[#0F0F11] h-full overflow-y-auto pb-20 relative scrollbar-hide" data-lenis-prevent>
 								<style>{`.scrollbar-hide::-webkit-scrollbar { display: none; }`}</style>
 								{/* Purple Glow Top */}
 								<div className="absolute top-0 left-0 right-0 h-32 bg-purple-600/10 blur-3xl pointer-events-none"></div>
@@ -330,10 +331,6 @@ const Features: React.FC = () => {
 								<div className="p-4 relative z-0">
 									<div className="bg-[#18181b] rounded-xl p-4 border border-white/5 relative overflow-hidden">
 										{/* Avatar Badge */}
-										<div className="absolute top-4 right-4 w-8 h-8 rounded-full bg-[#d946ef] flex items-center justify-center text-white text-xs font-bold shadow-lg shadow-purple-500/20">
-											CA
-										</div>
-
 										<div className="text-xs text-gray-400 mb-2">Описание:</div>
 										<div className="text-[11px] text-gray-200 leading-relaxed mb-5 space-y-2">
 											<p>
@@ -451,7 +448,7 @@ const Features: React.FC = () => {
 							</div>
 
 							{/* Dashboard Content */}
-							<div className="p-3 md:p-4 overflow-y-auto h-full pb-16 custom-scrollbar bg-[#121214]">
+							<div className="p-3 md:p-4 overflow-y-auto h-full pb-16 custom-scrollbar bg-[#121214]" data-lenis-prevent>
 								<style>{`
                       .custom-scrollbar::-webkit-scrollbar { width: 4px; }
                       .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
@@ -464,91 +461,91 @@ const Features: React.FC = () => {
 										9А
 									</div>
 									<div className="w-full overflow-x-auto">
-										<div className="min-w-[600px]">
+										<div className="min-w-[550px]">
 											{/* Table Header */}
 											<div className="grid grid-cols-[1.5fr_2fr_1fr_0.8fr] gap-2 px-2 pb-2 text-[10px] text-gray-500 uppercase font-bold border-b border-white/5 mb-1 relative">
 												<div>Ученик</div>
 												<div>Родители</div>
 												<div>Дедлайн</div>
-												<div className="text-center sticky right-0 bg-[#121214] z-10 shadow-[-5px_0_10px_rgba(0,0,0,0.5)]">
+												<div className="text-center -ml-2">
 													Согласие
 												</div>
 											</div>
 											{/* Rows */}
 											{[
 												{
-													s: "Смирнов Александр Евгеньевич",
-													p: "Попов Владимир Романович, Попова Ирина Александровна",
+													s: "Смирнов Александр",
+													p: "Попова Ирина Александровна",
 													d: "03.02.26, 21:00",
 													st: "Согласие",
 													c: "green",
 												},
 												{
-													s: "Васильева Елизавета Артемовна",
-													p: "Смирнов Евгений Владимирович, Смирнова Наталия Петровна",
+													s: "Васильева Елизавета",
+													p: "Смирнова Наталия Петровна",
 													d: "03.02.26, 21:00",
 													st: "Согласие",
 													c: "green",
 												},
 												{
-													s: "Петров Иван Николаевич",
-													p: "Морозов Сергей Игоревич, Морозова Татьяна Владимировна",
+													s: "Петров Иван",
+													p: "Морозов Сергей Игоревич",
 													d: "03.02.26, 21:00",
 													st: "Ожидание",
 													c: "white",
 												},
 												{
-													s: "Соловьева Арина Максимовна",
-													p: "Орлов Андрей Викторович, Орлова Людмила Дмитриевна",
+													s: "Соловьева Арина",
+													p: "Орлова Людмила Дмитриевна",
 													d: "03.02.26, 21:00",
 													st: "Отказ",
 													c: "red",
 												},
 												{
-													s: "Козлов Данил Романович",
-													p: "Петров Николай Александрович, Петрова Марина Игоревна",
+													s: "Козлов Данил",
+													p: "Петрова Марина Игоревна",
 													d: "03.02.26, 21:00",
 													st: "Согласие",
 													c: "green",
 												},
 												{
-													s: "Новикова Вероника Дмитриевна",
-													p: "Новиков Дмитрий Андреевич, Новикова Светлана Романовна",
+													s: "Новикова Вероника",
+													p: "Новикова Светлана Романовна",
 													d: "03.02.26, 21:00",
 													st: "Согласие",
 													c: "green",
 												},
 												{
-													s: "Волков Марк Александрович",
-													p: "Васильев Артем Романович, Васильева Ольга Сергеевна",
+													s: "Волков Марк",
+													p: "Васильева Ольга Сергеевна",
 													d: "03.02.26, 21:00",
 													st: "Согласие",
 													c: "green",
 												},
 												{
-													s: "Морозова Алиса Сергеевна",
-													p: "Козлов Роман Сергеевич, Козлова Анна Николаевна",
+													s: "Морозова Алиса",
+													p: "Козлова Анна Николаевна",
 													d: "03.02.26, 21:00",
 													st: "Ожидание",
 													c: "white",
 												},
 												{
-													s: "Лебедев Артур Игоревич",
-													p: "Соловьев Максим Дмитриевич, Соловьева Елена Викторовна",
+													s: "Лебедев Артур",
+													p: "Соловьева Елена Викторовна",
 													d: "03.02.26, 21:00",
 													st: "Отказ",
 													c: "red",
 												},
 												{
-													s: "Попова Камилла Владимировна",
-													p: "Лебедев Игорь Николаевич, Лебедева Екатерина Сергеевна",
+													s: "Попова Камилла",
+													p: "Попов Игорь Николаевич",
 													d: "03.02.26, 21:00",
 													st: "Согласие",
 													c: "green",
 												},
 												{
-													s: "Орлов Богдан Андреевич",
-													p: "Волков Александр Петрович, Волкова Юлия Максимовна",
+													s: "Орлов Андрей",
+													p: "Орлова Юлия Максимовна",
 													d: "03.02.26, 21:00",
 													st: "Согласие",
 													c: "green",
@@ -567,7 +564,7 @@ const Features: React.FC = () => {
 													<div className="text-[10px] text-gray-400">
 														{row.d}
 													</div>
-													<div className="flex justify-center sticky right-0 bg-[#121214] z-10 shadow-[-5px_0_10px_rgba(0,0,0,0.5)] h-full items-center group-hover:bg-[#1c1c1e] transition-colors -my-2.5 py-2.5">
+													<div className="flex justify-center h-full items-center -ml-2">
 														<span
 															className={`px-2 py-0.5 rounded text-[9px] font-bold border uppercase tracking-wider
                                        ${
@@ -593,27 +590,27 @@ const Features: React.FC = () => {
 										11А
 									</div>
 									<div className="w-full overflow-x-auto">
-										<div className="min-w-[600px]">
+										<div className="min-w-[550px]">
 											{/* Table Header */}
 											<div className="grid grid-cols-[1.5fr_2fr_1fr_0.8fr] gap-2 px-2 pb-2 text-[10px] text-gray-500 uppercase font-bold border-b border-white/5 mb-1 relative">
 												<div>Ученик</div>
 												<div>Родители</div>
 												<div>Дедлайн</div>
-												<div className="text-center sticky right-0 bg-[#121214] z-10 shadow-[-5px_0_10px_rgba(0,0,0,0.5)]">
+												<div className="text-center -ml-2">
 													Согласие
 												</div>
 											</div>
 											{/* Rows */}
 											{[
 												{
-													s: "Сидоров Владимир Артемович",
-													p: "Федоров Петр Николаевич, Федорова Галина Александровна",
+													s: "Сидоров Владимир",
+													p: "Федорова Галина Александровна",
 													d: "03.02.26, 21:00",
 													st: "Ожидание",
 													c: "white",
 												},
 												{
-													s: "Попова Софья Евгеньевна",
+													s: "Соловьева Софья",
 													p: "Соловьев Александр Петрович, Соловьева Людмила Сергеевна",
 													d: "03.02.26, 21:00",
 													st: "Ожидание",
@@ -633,7 +630,7 @@ const Features: React.FC = () => {
 													<div className="text-[10px] text-gray-400">
 														{row.d}
 													</div>
-													<div className="flex justify-center sticky right-0 bg-[#121214] z-10 shadow-[-5px_0_10px_rgba(0,0,0,0.5)] h-full items-center group-hover:bg-[#1c1c1e] transition-colors -my-2.5 py-2.5">
+													<div className="flex justify-center">
 														<span
 															className={`px-2 py-0.5 rounded text-[9px] font-bold border uppercase tracking-wider
                                        ${

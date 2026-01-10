@@ -1,6 +1,7 @@
 import type React from "react";
 import { useEffect, useState } from "react";
 import type { NavLink } from "../types";
+import { getLenis } from "../src/lenis";
 
 const links: NavLink[] = [
 	{ label: "Проблема", href: "#problem" },
@@ -27,25 +28,30 @@ const Navbar: React.FC = () => {
 		e.preventDefault();
 		const targetId = href.substring(1);
 		const targetElement = document.getElementById(targetId);
-		if (targetElement) {
-			const navbarHeight = 80; // Высота навбара
-			const targetPosition = targetElement.offsetTop - navbarHeight;
-			window.scrollTo({
-				top: targetPosition,
-				behavior: "smooth",
-			});
+		const lenis = getLenis();
+		if (targetElement && lenis) {
+			const navbarHeight = 80;
+			lenis.scrollTo(targetElement.offsetTop - navbarHeight);
 		}
 	};
 
 	return (
 		<nav
-			className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? "nav-blur py-3" : "py-5 bg-transparent"}`}
+			className={`fixed w-full z-50 transition-all duration-300 py-5 ${scrolled ? "nav-blur" : "bg-transparent"}`}
 		>
 			<div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
 				<button
 					className="flex items-center gap-3 cursor-pointer bg-transparent border-none p-0"
-					onClick={() => window.scrollTo(0, 0)}
-					onKeyDown={(e) => e.key === "Enter" && window.scrollTo(0, 0)}
+					onClick={() => {
+						const lenis = getLenis();
+						if (lenis) lenis.scrollTo(0);
+					}}
+					onKeyDown={(e) => {
+						if (e.key === "Enter") {
+							const lenis = getLenis();
+							if (lenis) lenis.scrollTo(0);
+						}
+					}}
 					aria-label="Перейти к началу страницы"
 					type="button"
 				>

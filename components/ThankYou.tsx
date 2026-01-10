@@ -1,4 +1,5 @@
 import type React from "react";
+import StarBorder from "../src/StarBorder";
 
 const ThankYou: React.FC = () => {
 	return (
@@ -57,29 +58,31 @@ const ThankYou: React.FC = () => {
 
 					{/* Developed By Card */}
 					<div className="flex justify-center lg:justify-end">
-						<div className="inline-flex flex-col items-start bg-card/50 border border-white/10 rounded-2xl p-6 backdrop-blur-md shadow-lg hover:border-primaryStart/30 transition-colors text-left max-w-md">
-							<div className="text-xs text-primaryStart font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
-								<i className="fa-solid fa-code"></i> Разработано
-							</div>
-							<div className="flex flex-col gap-3">
-								<div className="flex items-center gap-4">
-									<div className="w-2 h-2 rounded-full bg-white/20"></div>
-									<span className="text-sm lg:text-base text-gray-200">
-										Ученик 8Ю класса{" "}
-										<span className="font-bold text-white">Байрамов Эмиль</span>
-									</span>
+						<StarBorder thickness={2} color="#d946ef" speed="4s" className="max-w-md">
+							<div className="bg-card/80 border border-white/10 rounded-2xl flex flex-col items-start p-6 text-left backdrop-blur-md hover:border-primaryStart/30 transition-colors">
+								<div className="text-xs text-primaryStart font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
+									<i className="fa-solid fa-code"></i> Разработано
 								</div>
-								<div className="flex items-center gap-4">
-									<div className="w-2 h-2 rounded-full bg-white/20"></div>
-									<span className="text-sm lg:text-base text-gray-200">
-										Руководитель:{" "}
-										<span className="font-bold text-white">
-											Стенин Алексей Владимирович
+								<div className="flex flex-col gap-3">
+									<div className="flex items-center gap-4">
+										<div className="w-2 h-2 rounded-full bg-white/20"></div>
+										<span className="text-sm lg:text-base text-gray-200">
+											Ученик 8Ю класса{" "}
+											<span className="font-bold text-white">Байрамов Эмиль</span>
 										</span>
-									</span>
+									</div>
+									<div className="flex items-center gap-4">
+										<div className="w-2 h-2 rounded-full bg-white/20"></div>
+										<span className="text-sm lg:text-base text-gray-200">
+											Руководитель:{" "}
+											<span className="font-bold text-white">
+												Стенин Алексей Владимирович
+											</span>
+										</span>
+									</div>
 								</div>
 							</div>
-						</div>
+						</StarBorder>
 					</div>
 				</div>
 			</div>

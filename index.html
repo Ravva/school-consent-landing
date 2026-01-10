@@ -35,12 +35,22 @@
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
                         'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
+                        'star-movement-top': 'star-movement-top linear infinite alternate',
                     },
                     keyframes: {
                         fadeInUp: {
                             '0%': { opacity: '0', transform: 'translateY(20px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
-                        }
+                        },
+                        'star-movement-bottom': {
+                            '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+                            '100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
+                        },
+                        'star-movement-top': {
+                            '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
+                            '100%': { transform: 'translate(100%, 0%)', opacity: '0' },
+                        },
                     }
                 }
             }
@@ -58,9 +68,9 @@
             color: #fcfcfc;
         }
 
-        /* Smooth Scrolling */
+        /* Smooth Scrolling handled by Lenis */
         html {
-            scroll-behavior: smooth;
+            scroll-behavior: auto;
         }
 
         /* Custom Scrollbar */
@@ -108,7 +118,6 @@
         .nav-blur {
             backdrop-filter: blur(12px);
             background: rgba(2, 2, 4, 0.7);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
         }
     </style>
 <script type="importmap">

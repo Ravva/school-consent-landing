@@ -1,4 +1,6 @@
 import type React from "react";
+import BlurText from "../src/BlurText";
+import StarBorder from "../src/StarBorder";
 
 const Hero: React.FC = () => {
 	return (
@@ -16,12 +18,27 @@ const Hero: React.FC = () => {
 				</div>
 
 				{/* Title */}
-				<h1
-					className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-10 leading-[1.1] animate-fade-in-up"
-					style={{ animationDelay: "0.1s" }}
-				>
-					Бюрократия <br />
-					<span className="text-gradient">отменяется</span>
+				<h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-10 leading-[1.1]">
+					<BlurText
+						text="Бюрократия"
+						delay={500}
+						initialDelay={1000}
+						animateBy="words"
+						direction="top"
+						animationFrom={{ filter: "blur(10px)", opacity: 0 }}
+						animationTo={[{ filter: "blur(0px)", opacity: 1 }]}
+					/>
+					<br />
+					<BlurText
+						text="отменяется"
+						delay={500}
+						initialDelay={2000}
+						animateBy="words"
+						direction="top"
+						itemClassName="text-gradient"
+						animationFrom={{ filter: "blur(10px)", opacity: 0 }}
+						animationTo={[{ filter: "blur(0px)", opacity: 1 }]}
+					/>
 				</h1>
 
 				{/* Description */}
@@ -59,29 +76,31 @@ const Hero: React.FC = () => {
 
 					{/* Developed By Card */}
 					<div className="flex justify-center lg:justify-end">
-						<div className="inline-flex flex-col items-start bg-card/50 border border-white/10 rounded-2xl p-6 backdrop-blur-md shadow-lg hover:border-primaryStart/30 transition-colors text-left max-w-md">
-							<div className="text-xs text-primaryStart font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
-								<i className="fa-solid fa-code"></i> Разработано
-							</div>
-							<div className="flex flex-col gap-3">
-								<div className="flex items-center gap-4">
-									<div className="w-2 h-2 rounded-full bg-white/20"></div>
-									<span className="text-sm lg:text-base text-gray-200">
-										Ученик 8Ю класса{" "}
-										<span className="font-bold text-white">Байрамов Эмиль</span>
-									</span>
+						<StarBorder thickness={2} color="#d946ef" speed="4s" className="max-w-md">
+							<div className="bg-card/80 border border-white/10 rounded-2xl flex flex-col items-start p-6 text-left backdrop-blur-md hover:border-primaryStart/30 transition-colors">
+								<div className="text-xs text-primaryStart font-mono uppercase tracking-widest mb-4 flex items-center gap-2">
+									<i className="fa-solid fa-code"></i> Разработано
 								</div>
-								<div className="flex items-center gap-4">
-									<div className="w-2 h-2 rounded-full bg-white/20"></div>
-									<span className="text-sm lg:text-base text-gray-200">
-										Руководитель:{" "}
-										<span className="font-bold text-white">
-											Стенин Алексей Владимирович
+								<div className="flex flex-col gap-3">
+									<div className="flex items-center gap-4">
+										<div className="w-2 h-2 rounded-full bg-white/20"></div>
+										<span className="text-sm lg:text-base text-gray-200">
+											Ученик 8Ю класса{" "}
+											<span className="font-bold text-white">Байрамов Эмиль</span>
 										</span>
-									</span>
+									</div>
+									<div className="flex items-center gap-4">
+										<div className="w-2 h-2 rounded-full bg-white/20"></div>
+										<span className="text-sm lg:text-base text-gray-200">
+											Руководитель:{" "}
+											<span className="font-bold text-white">
+												Стенин Алексей Владимирович
+											</span>
+										</span>
+									</div>
 								</div>
 							</div>
-						</div>
+						</StarBorder>
 					</div>
 				</div>
 
